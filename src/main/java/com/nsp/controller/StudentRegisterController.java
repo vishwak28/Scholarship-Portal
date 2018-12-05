@@ -89,7 +89,8 @@ public class StudentRegisterController {
 			return new ModelAndView("sdashboard");	
 		}
 		else {
-			return new ModelAndView("index");
+			      
+			return new ModelAndView("index","login","Invalid Credentials");
 		}
 	}
 

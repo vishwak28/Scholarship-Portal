@@ -1,5 +1,7 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page errorPage="error.jsp"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +11,6 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <title>National Scholarship Portal</title>
-
-<!-- Bootstrap Core CSS -->
-<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
-<!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-<!-- <link href="css/custom.css" rel="stylesheet"> -->
 
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/bootstrap.min.css"/>">
@@ -48,25 +44,11 @@
 					<li><a href="contactus">Contact Us</a></li>
 					<li><a href="sregister">New Student Registration</a></li>
 					<li><a href="iregister">Institute Registration</a></li>
-					<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">New Registration <span class="caret"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="about-us">
-							<li><a href="pages/sregister">Student</a></li>
-							<li><a href="pages/iregister.jsp">Institute</a></li>
-						</ul></li> -->
+					
 				</ul>
 
 				<!-- Search -->
-				<!-- <form class="navbar-form navbar-right" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-default">
-						<span class="glyphicon glyphicon-search"></span> Search
-					</button>
-				</form> -->
-
+				
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>
@@ -254,6 +236,7 @@
 				<div class="panel-body">
 					<form action="student_login" method="POST">
 						<!-- action -->
+						<p >${login}</p>
 						<div class="form-group">
 							<input type="text" class="form-control" name="gs_aadhar"
 								placeholder="Username" required>
