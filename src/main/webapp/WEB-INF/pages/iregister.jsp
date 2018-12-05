@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@page errorPage="error.jsp"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="resources/css/style1.css">
@@ -17,6 +22,7 @@
 <body>
 <div class="login-page">
 	<center><h1>Institute Registration Form</h1></center>
+	<center> <p>${ins}</p></center>
   <div class="form">
     <form class="login-form" method="post" action="register">
       <h3>Basic Details</h3>

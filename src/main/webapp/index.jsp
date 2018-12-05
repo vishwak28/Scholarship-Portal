@@ -121,7 +121,7 @@
 							<font color="red"><strong>Attention Students</strong></font><br>
 							<br>Closing date for Arunachal Pradesh's state scheme Scheme
 							for Award of Stipend to the schedule tribe students of Arunachal
-							Pradesh has been extended up to <strong>15th Nov 2018</strong>
+							Pradesh has been extended up to <strong>15th December 2018</strong>
 						</p>
 					</marquee>
 				</div>

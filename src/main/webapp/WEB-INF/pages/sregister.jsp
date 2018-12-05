@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@page errorPage="error.jsp"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -22,8 +22,10 @@
 <body>
 <div class="login-page">
 	<center><h1>Student Registration Form</h1></center>
+	 <center> <p>${student} </p></center>
   <div class="form">
     <form class="login-form" method="post" action="student_register">
+     
       <h3>Basic Details</h3>
 
 				 Candidate Name: <input type="text" name="gs_name"
@@ -87,7 +89,7 @@
 				Bank Name: <input type="text" name="gs_bank_name" value="" placeholder="Bank Name"
 					required> 
 				Bank IFSC Code: <input type="text" name="gs_ifsc"
-					value="" placeholder="IFSC Code" pattern="/^[A-Za-z]{4}\d{7}$/" required> Bank Account Number: <input type="text"
+					value="" placeholder="IFSC Code" pattern="^[A-Za-z]{4}[A-Z0-9a-z]{6}$" required> Bank Account Number: <input type="text"
 					name="gs_account_no" value="" placeholder="Account Number" required>
 
 		

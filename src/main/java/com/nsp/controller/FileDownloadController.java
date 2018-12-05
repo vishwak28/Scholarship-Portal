@@ -48,7 +48,7 @@ public class FileDownloadController {
 		response.setContentType(mimetype);
 		response.setContentLength((int)file.length());
 
-		response.setHeader("Content-Disposition", String.format(" attachment; filename=\"%s\"",file.getName()));
+		response.setHeader("Content-Disposition", String.format("attachment; filename=\"%s\"",file.getName()));
 
 		FileCopyUtils.copy(inputstream,response.getOutputStream());
 		response.flushBuffer();

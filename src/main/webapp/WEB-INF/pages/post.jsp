@@ -26,7 +26,7 @@
 	</header>
 	<div id="main">
 		<article>
-			<form class="myForm" method="POST" action="uploadMultipleFile"
+			<form class="myForm" method="POST" action="/scholarship/uploadMultipleFile"
 				enctype="multipart/form-data">
 				<center>
 					<h1>Application Form</h1>
@@ -120,37 +120,37 @@
 						<tr>
 							<td><label>10th Marksheet <input type="file"
 									name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_metric" placeholder="gs_metric" readonly>
+									File_Name:<input type="text" name="name" value="gs_metric" placeholder="gs_metric" readonly>
 							</label></td>
 							<td><label>12 Marksheet <input type="file"
 									name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_hsc" placeholder="gs_hsc" readonly>
+									File_Name:<input type="text" name="name" value="gs_hsc"" placeholder="gs_hsc" readonly>
 							</label></td>
 						</tr>
 						<tr>
 							<td><label>Degree Marksheet <input type="file"
 									name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_degree" placeholder="gs_degree" readonly>
+									File_Name:<input type="text" name="name" value="gs_degree" placeholder="gs_degree" readonly>
 							</label></td>
 							<td><label> Domecile Certificate <input type="file"
 									name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_state" placeholder="gs_state" readonly>
+									File_Name:<input type="text" name="name" value="gs_state" placeholder="gs_state" readonly>
 							</label></td>
 						</tr>
 						<tr>
 							<td><label> Income Certificate <input type="file"
 									name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_income" placeholder="gs_income" readonly>
+									File_Name:<input type="text" name="name" value="gs_income" placeholder="gs_income" readonly>
 							</label></td>
 							<td><label> Aadhar Card No <input type="file"
 									name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_aadhar" placeholder="gs_aadhar" readonly>
+									File_Name:<input type="text"name="name" value="gs_aadhar" placeholder="gs_aadhar" readonly>
 							</label></td>
 						</tr>
 						<tr>
 							<td><label> Caste Validity Certificate <input
 									type="file" name="file" value="fileupload" id="fileupload">
-									File_Name:<input type="text" name="gs_caste" placeholder="gs_caste" readonly>
+									File_Name:<input type="text" name="name" value="gs_caste" placeholder="gs_caste" readonly>
 							</label></td>
 						</tr>
 

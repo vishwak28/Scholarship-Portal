@@ -177,7 +177,8 @@ public class StudentDao {
 	 * @return Aadhar No 
 	 */
 
-	public long getaadhar(String email){
+	public long getaadhar(String email) throws 	java.lang.NullPointerException
+	{
 
 		long gs_aadhar=0;
 		Object obj=null;
@@ -226,9 +227,9 @@ public class StudentDao {
 		try {
 			question=jdbcTemplate.queryForObject("select gs_question from gr12_security where gs_aadhar="+gs_aadhar+" ", String.class);
 			answer=jdbcTemplate.queryForObject("select gs_answer from gr12_security where gs_aadhar="+gs_aadhar+" ", String.class);
-		} catch (DataAccessException e) {
+		} 
+		catch (DataAccessException e) {
 
-			e.printStackTrace();
 			return -1;
 		}
 
@@ -237,14 +238,14 @@ public class StudentDao {
 		else return -1;
 
 	}
+	
 	public void SetPassword(long gs_aadhar, String password) {
 
 		String hash_password=encrypt(password);
 		jdbcTemplate.update("update gr12_students set gs_password='"+hash_password+"' where gs_aadhar="+gs_aadhar+"");
 	}
-	public String getName(long gs_aadhar) {
-
-		
+	
+	public String getName(long gs_aadhar) {		
 		return jdbcTemplate.queryForObject("select gs_name from gr12_Students where gs_aadhar="+gs_aadhar+"", String.class);
 	}
 

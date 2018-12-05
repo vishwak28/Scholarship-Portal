@@ -52,13 +52,18 @@ public class StudentRegisterController {
 
 		sdao.SaveSecurity(request.getParameter("gs_question"),request.getParameter("gs_answer"),ir.getGs_aadhar());
 
-		int i = sdao.saveData(ir);
-		if(i>0) {
-			return new ModelAndView("index");
-		}
-		else
-		{
-			return new ModelAndView("index");
+		try {
+			int i = sdao.saveData(ir);
+			if(i>0) {
+				return new ModelAndView("index");
+			}
+			else
+			{
+				return new ModelAndView("index");
+			}
+		} catch (Exception e) {
+		
+			        return new ModelAndView("sregister","student",e.getMessage());
 		}
 
 	}
@@ -105,8 +110,7 @@ public class StudentRegisterController {
 
 
 	@RequestMapping("/forget")
-	public ModelAndView Recovery()
-	{
+	public ModelAndView Recovery(){
 		return new ModelAndView("password_recovery");
 	}
 

@@ -252,7 +252,7 @@
 					</h3>
 				</div>
 				<div class="panel-body">
-					<form action="student_login">
+					<form action="student_login" method="POST">
 						<!-- action -->
 						<div class="form-group">
 							<input type="text" class="form-control" name="gs_aadhar"

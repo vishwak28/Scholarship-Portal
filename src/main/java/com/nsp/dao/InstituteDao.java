@@ -33,7 +33,7 @@ public class InstituteDao {
 	 */
 	public int saveData(InstituteRegister ir){
 
-		String query="insert into gr12_Institutes values('"+ir.getGi_code()+"','"+ir.getGi_name()+"','"+ir.getGi_pass()+"','"+ir.getGi_state()+"','"+ir.getGi_uni()+"')";
+		String query="insert into gr12_Institutes values('"+ir.getGi_code()+"','"+ir.getGi_name()+"','"+ir.getGi_pass()+"','"+ir.getGi_state()+"','"+ir.getGi_uni()+"',default)";
 		return jdbcTemplate.update(query);
 	}
 

@@ -58,16 +58,20 @@ public class InstituteRegisterController {
 	 * @throws IOException
 	 */
 	@RequestMapping("/register")
-	public ModelAndView InstituteRegister(@ModelAttribute InstituteRegister ir) throws ServerException,IOException
-	{
+	public ModelAndView InstituteRegister(@ModelAttribute InstituteRegister ir) throws ServerException,IOException{
 
-		int i = idao.saveData(ir);
-		if(i>0) {
-			return new ModelAndView("ilogin");
-		}
-		else
-		{
-			return new ModelAndView("index");
+		try {
+			int i = idao.saveData(ir);
+			if(i>0) {
+				return new ModelAndView("ilogin");
+			}
+			else
+			{
+				return new ModelAndView("index");
+			}
+		} catch (Exception e) {
+			return new ModelAndView("iregister","ins",e.getMessage());
+			
 		}
 
 	}
@@ -114,7 +118,6 @@ public class InstituteRegisterController {
 
 	@RequestMapping("/download_student_documents/{gs_aadhar}/{file_name}")
 	public ModelAndView student_record_download(@PathVariable long gs_aadhar){
-
 		return new ModelAndView("view");
 	}
 

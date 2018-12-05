@@ -112,10 +112,11 @@ public class FileUploadController {
 	public ModelAndView uploadMultipleFileHandler( @ModelAttribute StudentRegister st ,@RequestParam("name") String[] names,
 			@RequestParam("file") MultipartFile[] files) throws IOException {
 
+		
 		int flag=0; String loc="";
 		long gs_aadhar=sdao.getaadhar(st.getGs_email());
 
-		sdao.saveUploadData(st,gs_aadhar);
+		
 
 		if (files.length != names.length)
 			return new ModelAndView("post","str","Mandatory information missing");
@@ -159,7 +160,9 @@ public class FileUploadController {
 				FileUtils.deleteDirectory(new File(dir_loc));
 				return new ModelAndView("post","str1","You failed to upload " + name + " => " + e.getMessage());
 			}
+			
 		}
+		sdao.saveUploadData(st,gs_aadhar);
 		udao.Updatedoc(gs_aadhar);
 		return new ModelAndView("success");
 	}
